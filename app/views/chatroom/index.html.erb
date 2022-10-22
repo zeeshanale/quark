@@ -10,12 +10,14 @@
           <div class="ui feed">
             <div class="event">
               <div class="content">
+              <% @message.each do |msg| %>
                 <div class="summary">
-                   <a>Elliot Fu</a> added <a>Jenny Hess</a> as a friend
+                   <em><%= msg.user.username%></em>: <%= msg.body %>
                 </div>
+              <% end %>
               </div>
             </div>
-            <div class="event">
+            <!-- <div class="event">
               <div class="content">
                 <div class="summary">
                    <a>Stevie Feliciano</a> added <a>Elliot Fu</a> as a friend
@@ -35,7 +37,7 @@
                     <em>Christian Rocha</em>: Test message
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="extra content">
